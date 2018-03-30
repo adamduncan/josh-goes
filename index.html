@@ -89,13 +89,18 @@
       flex-direction: column;
       min-height: 100vh;
       justify-content: center;
-      padding: 2vw 0 5vw;
+      padding: 0 0 5vw;
       opacity: 0;
       width: 100%;
       transition: opacity 250ms ease-out;
     }
     .container.is-ready {
       opacity: 1;
+    }
+    @media (min-width: 50em) {
+      .container {
+        padding-top: 2vw;
+      }
     }
 
     .blocks {
