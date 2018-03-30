@@ -1,0 +1,15 @@
+
+{
+  "version": "1.0.0",
+  "short_name": "Josh Goes...",
+  "name": "Josh Goes to South America",
+  "start_url": "/",
+  "display": "standalone",
+  "launch_path": "/index.html",
+  "description": "How long until that Josh guy goes to South America? How long will he stay?",
+  "developer": {
+    "name": "Adam Duncan",
+    "url": "https://www.adamduncandesigns.com"
+  },
+  "default_locale": "en"
+}
