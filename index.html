@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Josh Goes to South America...</title>
+  <title>Josh Went to South America...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="theme-color" content="#032A74">
-  <meta name="description" content="How long until that Josh guy goes to South America? How long will he stay?" />
+  <meta name="description" content="How long was Josh in South America?" />
 
   <meta property="og:title" content="Josh Goes to South America">
-  <meta property="og:description" content="How long until that Josh guy goes to South America? How long will he stay?">
+  <meta property="og:description" content="How long was Josh in South America?">
   <meta property="og:image" content="https://adamduncandesigns.com/josh-icon-touch.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Josh Goes to South America">
-  <meta name="twitter:description" content="How long until that Josh guy goes to South America? How long will he stay?">
+  <meta name="twitter:description" content="How long was Josh in South America?">
   <meta name="twitter:image" content="https://adamduncandesigns.com/josh-icon-touch.png">
 
   <link rel="manifest" href="/manifest.json">
@@ -105,6 +105,7 @@
 
     .blocks {
       display: flex;
+      justify-content: center;
       width: 100%;
     }
     @media (min-width: 50em) {
@@ -177,13 +178,12 @@
 </head>
 <body>
   <div class="container">
-    <span class="text-small" data-lead>How long until...</span>
-    <h1>Josh <span class="h1-small" data-tense>goes to</span><br>South America?</h1>
+    <span class="text-small" data-lead>How long was...</span>
+    <h1>Josh <span class="h1-small" data-tense>in</span><br>South America?</h1>
     <div class="blocks">
-      <div class="block"><span class="count" data-time="days">188</span><span class="unit text-small">days</span></div>
-      <div class="block"><span class="count" data-time="hours">10</span><span class="unit text-small">hours</span></div>
-      <div class="block"><span class="count" data-time="minutes">43</span><span class="unit text-small">minutes</span></div>
-      <div class="block"><span class="count" data-time="seconds">22</span><span class="unit text-small">seconds</span></div>
+      <div class="block"><span class="count" data-time="days">1294</span><span class="unit text-small">days</span></div>
+      <div class="block"><span class="count" data-time="hours">2</span><span class="unit text-small">hours</span></div>
+      <div class="block"><span class="count" data-time="minutes">35</span><span class="unit text-small">minutes</span></div>
     </div>
   </div>
 
@@ -192,39 +192,10 @@
     <img class="josh-blink" src="josh-blink.png" alt="">
     <img class="josh-up" src="josh-up.png" alt="">
   </div>
-  <svg class="bg-blob" width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><title>Path 5</title><path d="M167.216 889.55c-256.82-85.803-514.321-383.203-476.44-548.081 37.88-164.878 641.823-138.791 726.361-281.507 84.538-142.717 514.224-314.525 720.032-77.77S922.275 869.306 702.228 1060.59c-220.048 191.285-278.192-85.235-535.012-171.04z" fill="#FFE03A" fill-rule="evenodd"/></svg>
+  <svg class="bg-blob" width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><title></title><path d="M167.216 889.55c-256.82-85.803-514.321-383.203-476.44-548.081 37.88-164.878 641.823-138.791 726.361-281.507 84.538-142.717 514.224-314.525 720.032-77.77S922.275 869.306 702.228 1060.59c-220.048 191.285-278.192-85.235-535.012-171.04z" fill="#FFE03A" fill-rule="evenodd"/></svg>
 
   <script>
     var containerEl = document.querySelector('.container');
-    var leadTextEl = document.querySelector('[data-lead]');
-    var tenseTextEl = document.querySelector('[data-tense]');
-
-    var daysEl = document.querySelector('[data-time="days"]');
-    var hoursEl = document.querySelector('[data-time="hours"]');
-    var minutesEl = document.querySelector('[data-time="minutes"]');
-    var secondsEl = document.querySelector('[data-time="seconds"]');
-
-    setInterval(function() {
-      var now = new Date();
-      var then = new Date(2018, 9, 4, 15, 30, 0);
-
-      var distance = then - now;
-      var hasPassed = distance < 0;
-
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      daysEl.innerHTML = hasPassed ? Math.abs(days) - 1 : Math.abs(days);
-      hoursEl.innerHTML = hasPassed ? Math.abs(hours) - 1 : Math.abs(hours);
-      minutesEl.innerHTML = hasPassed ? Math.abs(minutes) - 1 : Math.abs(minutes);
-      secondsEl.innerHTML = hasPassed ? Math.abs(seconds) - 1 : Math.abs(seconds);
-
-      leadTextEl.innerHTML = hasPassed ? 'How long has...' : 'How long until...';
-      tenseTextEl.innerHTML = hasPassed ? 'been in' : 'goes to';
-
-    }, 1000);
 
     setTimeout(function() {
       containerEl.classList.add('is-ready');
